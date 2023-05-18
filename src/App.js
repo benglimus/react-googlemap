@@ -52,6 +52,8 @@ export default function GoogleMapPage() {
   return (
     // Important! Always set the container height explicitly
     // <div style={{ height: "100vh", width: "100%" }}>
+    <>
+    <img src="" />
     <div style={{ height: "600px", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyD1Iyed2izpg6CLuvFHmyJhawG3aHqVgns" }}
@@ -59,14 +61,15 @@ export default function GoogleMapPage() {
         defaultZoom={defaultProps.zoom}
         // yesIWantToUseGoogleMapApiInternals
         // onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
-      >
+        >
         <AnyReactComponent
           // , 103.82827621974
           lat={1.379397201441663}
           lng={103.82827621974}
           text={"Hogwarts"}
-        />
+          />
       </GoogleMapReact>
     </div>
+          </>
   )
 }
